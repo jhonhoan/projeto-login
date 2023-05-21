@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
     <link rel="stylesheet" href="estilos/style.css">
+
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <main>
@@ -13,19 +16,23 @@
             <div id="imagem">
                 
             </div>
-            
+
             <div id="formulario">
                 <h1>LOGIN</h1>
                 <P>Seja bem-vindo(a). Faça login para acessar sua conta!</P>
-                <form action="post">
-                    <label for="iuser">Usuario</label>
-                    <input type="text" name="usuario" id="iuser">
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo" >
+                        <label  for="iemail"><i class='bx bx-user'></i></label>
+                        <input class="user" type="email" name="usuario" id="iemail" required minlength="5" autocomplete="email" placeholder="Insira seu email">
+                    </div>
                     
-                    <label for="isenha">Senha</label>
-                    <input type="password" name="senha" id="isenha">
+                    <div class="campo">
+                        <label   for="isenha"><i class='bx bx-key'></i></label>
+                        <input class="pass" type="password" name="senha" id="isenha" placeholder="Insira sua senha" minlength="8" maxlength="15" required autocomplete="current-password">
+                    </div>
                 </form>
-                <input type="submit" value="Entrar">
-                <a href="">Esqueceu a senha?</a>
+                <input type="submit" value="Entrar" id="entrar">
+                <a href="#" class="botao">Esqueceu a senha?<i class='bx bxs-envelope'></i></a>
             </div>
 
           

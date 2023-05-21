@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;  
+     
 }
 
 body, html{
@@ -23,16 +23,27 @@ main{
     height: 100vh;
 }
 
-H1{
+h1{
     font-family: 'Poppins', sans-serif;
+    color: rgb(167, 26, 167);
 }
 
 #formulario{
     display: block;
     font-family: 'Poppins', sans-serif;
-    padding: 15px;
+    margin-top: 20px;
+    padding: 15;
    
 }
+
+.user:focus-within{
+    background-color: rgba(137, 43, 226, 0.082);
+}
+.pass:focus-within{
+    background-color: rgba(137, 43, 226, 0.082);
+}
+
+
 #imagem{
     display: block;
    height: 200px;
@@ -54,24 +65,111 @@ H1{
     overflow:hidden;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.473);
     transition: width .4s, heigh.4s;
-    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
- @media (min-width: 475px) {} 
+.user, .pass{
+    height: 40px;
+    width: 85%;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(247, 0, 255, 0.205);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: rgb(203, 0, 253);
+    font-size: 16px;
+}
+
+.user::placeholder{
+    color: rgb(220, 43, 226);
+}
+
+.pass::placeholder{
+    color: rgb(220, 43, 226)
+}
+
+.campo{
+    
+    margin:10px auto;
+    width: 90%;
+    color: rgb(223, 95, 248);
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+#entrar{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    margin:auto;
+    width: 90%;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgb(184, 48, 218);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: .4s;
+}
+
+#entrar:hover{
+    
+    background-color: rgb(121, 18, 153);
+    
+    transition: .4s;
+}
+
+.botao {
+    display: block;
+    color: rgb(171, 94, 206);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.botao:hover{
+    text-decoration: underline;
+}
+
+ @media (min-width: 200px) {
+    #login{
+        display: inline-block;
+        width: 80vw;
+    }
+
+    #imagem{
+        width: 100%;
+        height: 20%;
+    }
+    #formulario{
+        width: 100%;
+        height: 30%;
+    }
+
+ } 
 
  @media (min-width: 640px) {
     #login{
         display: inline-block;
         width: 70vw;
-
+        height: 80vh;
+    }
+    #imagem{
+        width: 100% ;
+        height: 30%;
+    }
+    #formulario{
+        width: 100%;
+        height: 80%;
     }
  } 
 
  @media (min-width: 768px) {
     #login{
         display: inline-block;
-        width: 70vw;
-        height: 90vh;
+        width: 80vw;
+        height: 80vh;
     }
     #imagem{
         float: right;
@@ -101,7 +199,7 @@ H1{
         float: left;
         width: 50%;
         height: 100%;
-       
+        
     }
 } 
 
